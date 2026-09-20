@@ -8,15 +8,15 @@ public class ValidatedStudentDTO {
       private int gradYear;
       private int activeBacklogs;
       private List<String> skills;
-      private Set<String> filteredSkills;
+      private Set<String> normalizedSkillsSet;
       public String getBranch() {
           return branch;
       }
-      public Set<String> getFilteredSkills() {
-        return filteredSkills;
+      public Set<String> getNormalizedSkillsSet() {
+        return normalizedSkillsSet;
     }
-      public void setFilteredSkills(Set<String> filteredSkills) {
-          this.filteredSkills = filteredSkills;
+      public void setNormalizedSkillsSet(Set<String> normalizedSkillsSet) {
+          this.normalizedSkillsSet = normalizedSkillsSet;
       }
       public void setBranch(String branch) {
           this.branch = branch;
@@ -47,22 +47,19 @@ public class ValidatedStudentDTO {
       }
       
       public ValidatedStudentDTO(String branch, Double cgpa, int gradYear, int activeBacklogs, List<String> skills,
-            Set<String> filteredSkills) {
+            Set<String> normalizedSkillsSet) {
         this.branch = branch;
         this.cgpa = cgpa;
         this.gradYear = gradYear;
         this.activeBacklogs = activeBacklogs;
         this.skills = skills;
-        this.filteredSkills = filteredSkills;
+        this.normalizedSkillsSet = normalizedSkillsSet;
     }
-     
+      
       @Override
       public String toString() {
         return "ValidatedStudentDTO [branch=" + branch + ", cgpa=" + cgpa + ", gradYear=" + gradYear
                 + ", activeBacklogs=" + activeBacklogs + ", skills=" + skills + "]";
       }
-
-      
-
 
 }
