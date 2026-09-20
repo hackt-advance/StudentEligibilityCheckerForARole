@@ -1,4 +1,4 @@
-# Student Eligibility Checker for a Role
+# Student Eligibility Checker for Roles
 
 A simple Java console application that checks whether a student is eligible for different internship or job roles based on rules like branch, CGPA, graduation year, active backlogs, and required skills.
 
